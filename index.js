@@ -4,7 +4,6 @@ const path = require("path")
 const orderRoutes = require('./orderRoutes');
 const adminRoutes = require('./adminRoutes');
 const cors = require('cors');
-
 app.use(cors({
   origin: 'https://reactapp.attechdigital.in',
   methods: ['GET', 'POST'],
