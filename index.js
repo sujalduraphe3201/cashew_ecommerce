@@ -5,8 +5,9 @@ const path = require("path")
 const orderRoutes = require('./orderRoutes');
 const adminRoutes = require('./adminRoutes');
 
-app.use(cors());
+app.use(cors({ origin: 'https://reactapp.attechdigital.in/' }));
 app.use(express.json());
+
 app.use(express.static(path.join(__dirname, 'client/dist')))
 // Route for placing orders via Checkout (POST /orders)
 app.use('/orders', orderRoutes);
