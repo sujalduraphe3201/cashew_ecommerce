@@ -5,7 +5,14 @@ const path = require("path")
 const orderRoutes = require('./orderRoutes');
 const adminRoutes = require('./adminRoutes');
 
-app.use(cors({ origin: 'https://reactapp.attechdigital.in/' }));
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'https://reactapp.attechdigital.in',
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'client/dist')))
