@@ -1,10 +1,8 @@
 const express = require('express');
-const cors = require('cors');
 const app = express();
 const path = require("path")
 const orderRoutes = require('./orderRoutes');
 const adminRoutes = require('./adminRoutes');
-
 const cors = require('cors');
 
 app.use(cors({
