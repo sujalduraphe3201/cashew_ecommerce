@@ -13,9 +13,7 @@ app.use(cors({
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'client/dist')))
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
+
 // Route for placing orders via Checkout (POST /orders)
 app.use('/orders', orderRoutes);
 // Route for fetching orders for the admin page (GET /admin/orders)
